@@ -37,6 +37,7 @@ public:
 
     // getters / setters
     void waitForGreen();
+    void simulate();
     // typical behaviour methods
 
 private:

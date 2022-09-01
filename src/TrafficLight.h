@@ -36,7 +36,7 @@ public:
     // constructor / desctructor
 
     // getters / setters
-
+    void waitForGreen();
     // typical behaviour methods
 
 private:

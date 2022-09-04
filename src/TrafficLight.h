@@ -25,7 +25,7 @@ T receive();
 
 private:
 std::deque<T> _queue;
-std::condition_variable_cond;
+std::condition_variable _cond;
 std::mutex _mutex;
 
     
@@ -41,7 +41,7 @@ class TrafficLight: public TrafficObject
 {
 public:
     // constructor / desctructor
-
+    TrafficLight();
     // getters / setters
     TrafficLightPhase getCurrentPhase();
 
@@ -57,12 +57,12 @@ private:
     // and use it within the infinite loop to push each new TrafficLightPhase into it by calling 
     // send in conjunction with move semantics.
 
-    MessageQueue<TrafficLightPhase> _queue 
+    MessageQueue<TrafficLightPhase> _queue; 
 
     std::condition_variable _condition;
     std::mutex _mutex;
 
-    TrafficLightPhase _currentPhase;
+    //TrafficLightPhase _currentPhase;
 };
 
 #endif
